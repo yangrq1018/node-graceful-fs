@@ -110,7 +110,7 @@ function patch (fs) {
   fs.readFile = readFile
   function readFile (path, options, cb) {
     if (typeof options === 'function')
-      cb = options, options = null
+      cb = options, options = {}
 
     return go$readFile(path, options, cb)
 
